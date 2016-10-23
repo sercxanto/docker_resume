@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eu
 
 SCRIPT_DIR=$(dirname $0)
 
-docker run --rm -it sercxanto/resume /bin/bash
+source $SCRIPT_DIR/settings.sh
+
+docker run --rm -it $tag_prefix /bin/bash
