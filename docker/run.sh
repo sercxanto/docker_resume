@@ -2,8 +2,14 @@
 
 set -eu
 
-SCRIPT_DIR=$(dirname $0)
+SCRIPT_DIR=$(readlink -f $(dirname $0))
 
 source $SCRIPT_DIR/settings.sh
 
-docker run --rm -it $tag_prefix /bin/bash
+localimage=${tag_prefix}_local:$version
+
+#     -v $SCRIPT_DIR/share:/home/dockeruser/share \
+
+
+docker run --rm -it -u dockeruser \
+    $localimage /bin/bash
