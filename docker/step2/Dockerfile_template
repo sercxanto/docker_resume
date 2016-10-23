@@ -1,0 +1,3 @@
+FROM __TAG__
+MAINTAINER Georg Lutz <georg@georglutz.de>
+RUN groupmod -g __GID__ dockergroup && usermod -u __UID__ dockeruser
