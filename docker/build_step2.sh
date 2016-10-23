@@ -20,3 +20,5 @@ sed -e s%__TAG__%${baseimage}% -e "s/__UID__/1000/" -e "s/__GID__/1000/" \
     > $tmpdir/Dockerfile
 
 docker build $tmpdir --tag $localimage
+
+rm -rf $tmpdir
