@@ -5,5 +5,5 @@ RUN apt-get update && \
 RUN groupadd dockergroup &&\
     useradd -g dockergroup -m dockeruser &&\
     sudo -u dockeruser mkdir /home/dockeruser/share
-RUN npm install hackmyresume -g
+RUN npm install hackmyresume resume-cli -g
 
