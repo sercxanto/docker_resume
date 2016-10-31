@@ -31,6 +31,8 @@ fi
 
 echo "Running $localimage"
 
+mkdir -p $SCRIPT_DIR/share
+
 docker run --rm -it -u dockeruser \
     -v $SCRIPT_DIR/share:/home/dockeruser/share \
     -w /home/dockeruser/share \
